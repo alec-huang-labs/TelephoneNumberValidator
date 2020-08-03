@@ -29,8 +29,10 @@ function telephoneCheck(str) {
     }
     let tenRegex = /(\(*|([0-9]))([0-9]{2,3})(\)\s*|-*|\s*)([0-9]{3,})(\(*|-*|\s*)([0-9]{4,})/;
     let result = tenRegex.test(str);
-    console.log(`result: ${result}`);
     return result;
 }
-console.log(telephoneCheck("2 (757) 622-7382"));
+//Test Functions:
+console.log(telephoneCheck("2 (757) 622-7382"), telephoneCheck("(275)76227382"), telephoneCheck("1 456 789 4444"));
 
+//Try calling the function within the '()' followed by commas like above:
+console.log();
